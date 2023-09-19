@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .input, .container .category{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .input input{
+   width: 28.75rem;
+   height: 2.5rem;
+
+   border: 0;
+   background-color: var(--gray-500);
+   border-radius: 8px;
+   padding-left: 1rem;
+
+}
+
+.container .category select{
+    width: 10.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--gray-500);
+    color: var(--gray-100);
+}
+
+.container .button{
+    height: 4.0625rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.container .button button{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+
+    background-color: var(--purple);
+    border: 0;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

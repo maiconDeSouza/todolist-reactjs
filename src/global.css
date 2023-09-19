@@ -1,0 +1,56 @@
+:root{
+    --purple-light: #a881e6;
+    --purple: #7450ac;
+    --purple-dark: #523480;
+
+    --gray-100: #fbf9fe;
+    --gray-200: #afabb6;
+    --gray-300: #252529;
+    --gray-400: #17171a;
+    --gray-500: #111112;
+    --gray-600: #0c0c0d;
+    --gray-700: #080808;
+    --gray-800: #050505;
+    --gray-900: #030303;
+
+    --success-light: #6edb8f;
+    --success: #4caf50;
+
+    --pink: #db5bbf;
+    --pink-dark: #251622;
+
+    --orange: #e07b67;
+    --orange-dark: #261a17;
+
+    --yellow: #bb9f3a;
+    --yellow-dark: #211e12;
+
+    --green: #8cad51;
+    --green-dark: #1c2015;
+
+    --blue: #7b94cb;
+    --blue-dark: #1a1d23;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--gray-600);
+}
+
+body, input, textarea, button{
+    font-family: 'Poppins', sans-serif;
+    color: var(--gray-100);
+    font-weight: 400;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'BioRhyme', serif;
+    -webkit-font-smoothing: antialiased;
+}
