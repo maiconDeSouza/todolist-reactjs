@@ -19,7 +19,7 @@ export function App() {
   const [taskList, setTaskList] = useState([])
 
   function setConcluded(id){
-    const edTask = taskList.map(task => {
+    const upTask = taskList.map(task => {
       if(task.id === id){
         task.concluded = !task.concluded
         return task
@@ -27,7 +27,12 @@ export function App() {
       return task
     })
 
-    setTaskList(edTask)
+    setTaskList(upTask)
+  }
+
+  function deleteTask(id){
+    const upTask = taskList.filter(task => task.id !== id)
+    setTaskList(upTask)
   }
   
   return (
@@ -45,7 +50,7 @@ export function App() {
               taskList.map(task => {
                 if(task.concluded === false){
                   return (
-                    <Todo task={task.task} tag={task.tag} taskId={task.id} progress='inProgress' key={task.id} setConcluded={setConcluded}/>
+                    <Todo task={task.task} tag={task.tag} taskId={task.id} progress='inProgress' key={task.id} setConcluded={setConcluded} deleteTask={deleteTask}/>
                   )
                 }
               })
@@ -58,7 +63,7 @@ export function App() {
               taskList.map(task => {
                 if(task.concluded){
                   return (
-                    <Todo task={task.task} tag={task.tag} taskId={task.id} progress='concluded' key={task.id} setConcluded={setConcluded}/>
+                    <Todo task={task.task} tag={task.tag} taskId={task.id} progress='concluded' key={task.id} setConcluded={setConcluded} deleteTask={deleteTask}/>
                   )
                 }
               })
