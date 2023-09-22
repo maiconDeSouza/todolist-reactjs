@@ -1,13 +1,14 @@
 import { Trash } from 'lucide-react'
 import styles from './Todo.module.css'
 
-export function Todo(){
+export function Todo({task, tag, taskId, progress, setConcluded}){
+    const styleProgress = styles[progress]
     return (
-        <div className={styles.container}>
-            <div className={styles.status}></div>
+        <div className={styles.container} onClick={() => setConcluded(taskId)}>
+            <div className={`${styles.status} ${styleProgress}`}></div>
             <div className={styles.content}>
-                <p>Fazer Compras</p>
-                <span>tag</span>
+                <p>{task}</p>
+                <span>{tag}</span>
             </div>
             <div className={styles.trash}>
                 <Trash size={22}/>

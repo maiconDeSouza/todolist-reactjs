@@ -7,15 +7,25 @@
     border-radius: 8px;
 
     display: flex;
+
+    cursor: pointer;
 }
+
 
 .container .status{
     width: 1.5rem;
     height: 100%;
 
-    background-color: var(--yellow);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+}
+
+.inProgress{
+    background-color: var(--yellow);
+}
+
+.concluded{
+    background-color: var(--green);
 }
 
 .container .content{
@@ -24,6 +34,7 @@
     padding: 1rem;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .container .content span{
@@ -44,5 +55,13 @@
 }
 
 .container .trash svg{
-    color: brown;
+    color: var(--red);
+}
+
+.container .trash svg:hover{
+    color: var(--red-dark);
+}
+
+.container .trash svg:active{
+    transform: scale(0.5);
 }
